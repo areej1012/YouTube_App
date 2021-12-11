@@ -73,8 +73,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun initRV(){
-        binding.rv.adapter = VideoAdpater(videoArray,player)
-        binding.rv.layoutManager = LinearLayoutManager(this)
+//        binding.rv.adapter = VideoAdpater(videoArray,player)
+//        binding.rv.layoutManager = LinearLayoutManager(this)
+
+        binding.gv.adapter = GridViewApdter(this, player ,videoArray)
     }
     fun checkConnection(){
         val cm = this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
